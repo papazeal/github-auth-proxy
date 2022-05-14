@@ -1,0 +1,19 @@
+{
+  "name": "github-auth-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papazeal/github-auth-proxy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/papazeal/github-auth-proxy/issues"
+  },
+  "homepage": "https://github.com/papazeal/github-auth-proxy#readme"
+}
