@@ -1,1 +1,3 @@
-.pnpm*
+*pnpm*
+.vercel
+node_modules
