@@ -1,4 +1,4 @@
-## Github OAuth Proxy
+## GitHub OAuth Proxy
 
 Serverless function that handle code from [step #1](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#1-request-a-users-github-identity) and make a POST request on [step #2](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#2-users-are-redirected-back-to-your-site-by-github) then redirect to your site with access_token as URL parameter.
 
