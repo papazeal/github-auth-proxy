@@ -23,19 +23,18 @@ export default async function handler(request, response) {
   )
   const authResponseText = await authResponse.text()
 
-  if (process.env.REDIRECT_URI) {
+  if (state && isUrl(state)) {
+    // use state params for dynamic redirect
+    response.writeHead(301, {
+      Location: state + '?' + authResponseText,
+    })
+  } else if (process.env.REDIRECT_URI) {
     // redirect to REDIRECT_URI
     response
       .writeHead(301, {
         Location: process.env.REDIRECT_URI + '?' + authResponseText,
       })
       .end()
-  } else if (state && isUrl(state)) {
-    // if REDIRECT_URI is not defined
-    // use state params for dynamic redirect
-    response.writeHead(301, {
-      Location: state + '?' + authResponseText,
-    })
   } else {
     response.status(200).json({
       Response: authResponseText,
